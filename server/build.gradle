@@ -10,7 +10,7 @@ bootJar {
 dependencies {
     implementation project(":server-client")
 
-    implementation 'io.microconfig:microconfig-core:4.3.4',
+    implementation 'io.microconfig:microconfig-core:4.9.2',
             'org.eclipse.jgit:org.eclipse.jgit:5.10.0.202012080955-r',
             'org.springframework.boot:spring-boot-starter-web',
             'org.springframework.boot:spring-boot-starter-actuator',
