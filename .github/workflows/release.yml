@@ -18,7 +18,7 @@ jobs:
           java-version: 11
       - name: Build Jar
         run: ./gradlew shadowJar -p server-microctl
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: microctl.jar
           path: server-microctl/build/libs/microctl.jar
@@ -43,7 +43,7 @@ jobs:
       - name: Test Run
         shell: bash
         run: ./microctl version
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: microctl-linux
           path: ./microctl
@@ -65,7 +65,7 @@ jobs:
           mkdir volume
           docker build -t microctl:alpine -f server-microctl/Dockerfile-alpine .
           docker run -v "$PWD/volume":/volume microctl:alpine cp /microctl /volume/microctl
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: microctl-alpine
           path: volume/microctl
@@ -90,7 +90,7 @@ jobs:
       - name: Test Run
         shell: bash
         run: ./microctl.exe version
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: microctl-windows
           path: microctl.exe
@@ -115,7 +115,7 @@ jobs:
       - name: Test Run
         shell: bash
         run: ./microctl version
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: microctl-macos
           path: ./microctl
