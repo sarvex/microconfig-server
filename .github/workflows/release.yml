@@ -31,7 +31,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: Download Jar
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: microctl.jar
       - name: Install GraalVM Native Image
@@ -56,7 +56,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: Download Jar
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: microctl.jar
       - name: Build Binary
@@ -78,7 +78,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: Download Jar
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: microctl.jar
       - name: Install GraalVM Native Image
@@ -103,7 +103,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: Download Jar
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: microctl.jar
       - name: Install GraalVM Native Image
@@ -139,7 +139,7 @@ jobs:
           prerelease: false
 
       - name: Download Jar
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: microctl.jar
       - name: Upload Jar Release
@@ -153,7 +153,7 @@ jobs:
           asset_content_type: application/java-archive
 
       - name: Download Linux Binary
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: microctl-linux
       - name: Zip
@@ -170,7 +170,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Download MacOS Binary
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: microctl-macos
       - name: Zip
@@ -187,7 +187,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Download Windows Binary
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: microctl-windows
       - name: Zip
@@ -204,7 +204,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Download Alpine Binary
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: microctl-alpine
       - name: Zip
