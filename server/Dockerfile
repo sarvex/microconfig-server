@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk-centos:15
+FROM azul/zulu-openjdk-centos:21.0.3
 EXPOSE 80
 
 RUN yum -y install openssl; yum clean all
